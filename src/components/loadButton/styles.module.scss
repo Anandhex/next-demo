@@ -1,0 +1,13 @@
+@use "../../styles/base" as b;
+
+.button {
+  background-color: b.$foreground;
+  color: b.$background;
+  border: 1px solid b.$foreground;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  &:hover {
+    background-color: b.$background;
+    color: b.$foreground;
+  }
+}

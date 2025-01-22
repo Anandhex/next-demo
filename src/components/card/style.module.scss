@@ -1,0 +1,36 @@
+@use "../../styles/base" as base;
+
+.card {
+  background-color: base.$background;
+  display: flex;
+  flex-direction: column;
+
+  &-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &-body {
+    color: base.$foreground;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  &-footer {
+    color: base.$accent-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: base.$breakpoint-tablet) {
+  .card {
+    flex-direction: row;
+    img {
+      width: 50%;
+    }
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
